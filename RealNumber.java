@@ -22,7 +22,7 @@ public class RealNumber{
     if (value == 0 || other.getValue() == 0){
       return value == other.getValue();
     }
-    return Math.round(value * 100000) == Math.round(other.getValue() * 100000);
+    return Math.abs(value - other.getValue()) / value < value / 100000;
   }
 
   /*
@@ -32,6 +32,7 @@ public class RealNumber{
   public RealNumber add(RealNumber other){
      //other can be ANY RealNumber, including a RationalNumber
      //or other subclasses of RealNumber (that aren't written yet)
+
      return null;
   }
 
