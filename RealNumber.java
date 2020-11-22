@@ -22,7 +22,7 @@ public class RealNumber{
     if (value == 0 || other.getValue() == 0){
       return value == other.getValue();
     }
-    return (int)(value * 100000) == (int)(other.getValue() * 100000);
+    return Math.round(value * 100000) == Math.round(other.getValue() * 100000);
   }
 
   /*
