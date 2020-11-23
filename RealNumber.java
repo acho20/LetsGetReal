@@ -22,7 +22,7 @@ public class RealNumber{
     if (value == 0 || other.getValue() == 0){
       return value == other.getValue();
     }
-    return Math.abs(value - other.getValue()) / value <= value / 100000;
+    return (Math.abs(value - other.getValue())) <= value / 100000;
   }
 
   /*

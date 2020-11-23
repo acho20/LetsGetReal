@@ -10,6 +10,10 @@ public class RationalNumber extends RealNumber {
     super(0.0);//this value is ignored!
     numerator = nume;
     denominator = deno;
+    if(numerator == 0 || denominator == 0){
+      numerator = 0;
+      denominator = 1;
+    }
     reduce();
   }
 
@@ -72,8 +76,13 @@ public class RationalNumber extends RealNumber {
   *reduced after construction.
   */
   private void reduce(){
-    numerator = numerator / gcd(numerator, denominator);
-    denominator = denominator / gcd(numerator, denominator);
+    int x = gcd(numerator,denominator);
+    numerator = numerator / x;
+    denominator = denominator / x;
+    if (denominator < 0){
+      denominator = Math.abs(denominator);
+      numerator = numerator * -1;
+    }
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
