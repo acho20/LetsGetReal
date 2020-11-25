@@ -18,12 +18,7 @@ public class RealNumber{
   *Return true when the values are within 0.001% of eachother.
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
-  public boolean equals(RealNumber other){
-    if (value == 0 || other.getValue() == 0){
-      return value == other.getValue();
-    }
-    return (Math.abs(value - other.getValue())) <= value / 100000;
-  }
+
 
   /*
   *Return a new RealNumber that has the value of:
