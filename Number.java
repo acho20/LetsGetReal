@@ -6,7 +6,13 @@ public abstract class Number{
   return a positive value when this Number is larger than the other Number
   */
   public int compareTo(Number other){
-    //TO BE IMPLEMENTED
+    if(this.getValue() == other.getValue()){
+      return 0;
+    }else if (this.getValue > other.getValue()){
+      return 1;
+    }else{
+      return -1;
+    }
   }
 
   /*
