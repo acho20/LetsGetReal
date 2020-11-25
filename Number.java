@@ -8,7 +8,7 @@ public abstract class Number{
   public int compareTo(Number other){
     if(this.getValue() == other.getValue()){
       return 0;
-    }else if (this.getValue > other.getValue()){
+    }else if (this.getValue() > other.getValue()){
       return 1;
     }else{
       return -1;
@@ -21,9 +21,9 @@ public abstract class Number{
   *Special case: if one is exactly zero, the other must be exactly zero.
   */
   public boolean equals(RealNumber other){
-    if (value == 0 || other.getValue() == 0){
-      return value == other.getValue();
+    if (this.getValue() == 0 || other.getValue() == 0){
+      return this.getValue() == other.getValue();
     }
-    return (Math.abs(value - other.getValue())) <= value / 100000;
+    return (Math.abs(this.getValue() - other.getValue())) <= this.getValue() / 100000;
   }
 }
